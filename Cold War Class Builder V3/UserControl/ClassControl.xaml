@@ -1,0 +1,49 @@
+﻿<UserControl
+    x:Class="Cold_War_Class_Builder_V3.ClassControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cold_War_Class_Builder_V3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Width="526" Height="968">
+
+    <Grid Width="526" FocusVisualPrimaryBrush="Black" Background="Black" Loaded="Grid_Loaded">
+        <local:GunControl x:Name="PrimaryGunControl" HorizontalAlignment="Left" Margin="14,68,0,0" VerticalAlignment="Top" Tapped="GunControl_Tapped"/>
+        <local:GunControl x:Name="SecondaryGunControl" HorizontalAlignment="Left" Margin="14,259,0,0" VerticalAlignment="Top" Tapped="GunControl_Tapped"/>
+        <TextBlock HorizontalAlignment="Left" Margin="14,238,0,0" Text="Secondary" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="14,47,0,0" Text="Primary" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14"/>
+        <TextBlock x:Name="BuildNameLabel" HorizontalAlignment="Left" Margin="14,17,0,0" Text="Build Name" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Stencil" FontSize="24"/>
+        <local:TextImageControl x:Name="TacticalIcon" HorizontalAlignment="Left" Margin="14,461,0,0" VerticalAlignment="Top" Tapped="SelectIcon_Tapped"/>
+        <TextBlock HorizontalAlignment="Left" Margin="14,438,0,0" Text="Tactical" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Stencil" FontSize="12"/>
+        <TextBlock HorizontalAlignment="Left" Margin="14,570,0,0" Text="Perks" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14" RenderTransformOrigin="0.533,0.471"/>
+        <local:TextImageControl x:Name="LethalIcon" HorizontalAlignment="Left" Margin="114,461,0,0" VerticalAlignment="Top" Tapped="SelectIcon_Tapped"/>
+        <TextBlock HorizontalAlignment="Left" Margin="114,438,0,0" Text="Lethal" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Stencil" FontSize="12"/>
+        <local:TextImageControl x:Name="FieldUpgradeIcon" HorizontalAlignment="Left" Margin="214,461,0,0" VerticalAlignment="Top" Tapped="SelectIcon_Tapped"/>
+        <TextBlock HorizontalAlignment="Left" Margin="214,438,0,0" Text="Field Upgrade" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Stencil" FontSize="12"/>
+
+        <Image x:Name="PrimaryGunsmith"  Stretch="Uniform" Source="{StaticResource Gunsmith}" Width="79" Height="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397,175,0,0" PointerEntered="GunSmith_Hover" PointerExited="GunSmith_UnHover" RequestedTheme="Default" Tapped="Gunsmith_Tap"/>
+
+
+        <StackPanel Margin="14,594,0,0" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top" Height="340">
+            <RelativePanel x:Name="PerkRow1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="294" Tapped="PerkRowTapped">
+                <local:TextImageControl />
+                <local:TextImageControl HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top"/>
+                <local:TextImageControl HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top"/>
+            </RelativePanel>
+            <RelativePanel x:Name="PerkRow2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="294" Visibility="Visible" Margin="0,5,0,0" Tapped="PerkRowTapped">
+                <local:TextImageControl />
+                <local:TextImageControl HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top"/>
+                <local:TextImageControl HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Top"/>
+            </RelativePanel>
+            <RelativePanel HorizontalAlignment="Left" Width="294" Visibility="Visible" Height="118" Margin="0,10,0,0">
+                <TextBlock HorizontalAlignment="Left" Text="Wildcard" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Stencil" FontSize="14" />
+                <local:TextImageControl x:Name="WildCardIcon" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,18,0,0" Tapped="SelectIcon_Tapped" />
+            </RelativePanel>
+        </StackPanel>
+        <Image x:Name="SecondaryGunsmith"  Stretch="Uniform" Source="{StaticResource Gunsmith}" Width="79" Height="58" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="397,367,0,0" PointerEntered="GunSmith_Hover" PointerExited="GunSmith_UnHover" RequestedTheme="Default" Tapped="Gunsmith_Tap"/>
+        <Image x:Name="SecondaryViewButton" Source="{StaticResource ViewButton}" HorizontalAlignment="Left" Height="23" Margin="397,341,0,0" VerticalAlignment="Top" Width="79" PointerEntered="ViewButton_MouseEnter" PointerExited="ViewButton_MouseExit" Tapped="ViewButton_Tapped"/>
+        <Image x:Name="PrimaryViewButton" Source="{StaticResource ViewButton}" HorizontalAlignment="Left" Height="23" Margin="397,149,0,0" VerticalAlignment="Top" Width="79" PointerEntered="ViewButton_MouseEnter" PointerExited="ViewButton_MouseExit" Tapped="ViewButton_Tapped"/>
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,22 @@
+﻿<ContentDialog
+    x:Class="Cold_War_Class_Builder_V3.ResourcesDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cold_War_Class_Builder_V3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Resources Used"
+    PrimaryButtonText=""
+    SecondaryButtonText="Close">
+
+    <Grid>
+        <StackPanel>
+            <RelativePanel>
+                <TextBlock Height="32">All Icons used are from: </TextBlock>
+                <HyperlinkButton Click="Icons8_click" HorizontalAlignment="Left" VerticalAlignment="Top" Height="32" Margin="147,-6,0,0">Icons8</HyperlinkButton>
+            </RelativePanel>
+            <TextBlock Height="36" TextWrapping="WrapWholeWords">Images: All images are modified versions of screenshots taken from Call Of Duty Cold War</TextBlock>
+        </StackPanel>
+    </Grid>
+</ContentDialog>

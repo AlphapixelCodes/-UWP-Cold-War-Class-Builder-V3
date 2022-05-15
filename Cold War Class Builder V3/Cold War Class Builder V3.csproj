@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{E6D4380D-8A59-4515-B420-E0201BB5CCB0}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cold_War_Class_Builder_V3</RootNamespace>
+    <AssemblyName>Unofficial Cold War Class Storage</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <PackageCertificateThumbprint>E6886C0D1D3F48CD96A444F2AF47ADAAA394B169</PackageCertificateThumbprint>
+    <PackageCertificateKeyFile />
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AttachmentDialogV2.xaml.cs">
+      <DependentUpon>AttachmentDialogV2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\GunSelectDialog\ComboBoxGunSelectDialog.xaml.cs">
+      <DependentUpon>ComboBoxGunSelectDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\BlueprintDialog\CustomBlueprintsDialogV2.xaml.cs">
+      <DependentUpon>CustomBlueprintsDialogV2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\AddBlueprintDialog.xaml.cs">
+      <DependentUpon>AddBlueprintDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\AddCustomAttachmentDialog.xaml.cs">
+      <DependentUpon>AddCustomAttachmentDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\FlyoutMenuItemExtended.cs" />
+    <Compile Include="Classes\CustomBlueprint.cs" />
+    <Compile Include="GUIs\BlueprintDialog\CustomBlueprintsDialog.xaml.cs">
+      <DependentUpon>CustomBlueprintsDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\FileManager.cs" />
+    <Compile Include="GUIs\NameDialog.xaml.cs">
+      <DependentUpon>NameDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\GunSelectDialog\GunSelectDialogV2.xaml.cs">
+      <DependentUpon>GunSelectDialogV2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\PerkDialog\PerkDialogV2.xaml.cs">
+      <DependentUpon>PerkDialogV2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Settings.cs" />
+    <Compile Include="GUIs\SettingsDialog.xaml.cs">
+      <DependentUpon>SettingsDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\GunSelectDialog\GunSelectInterface.cs" />
+    <Compile Include="GUIs\RemoveAttachmentDialog.xaml.cs">
+      <DependentUpon>RemoveAttachmentDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\GunSelectDialog\GunSelectStatic.cs" />
+    <Compile Include="Classes\GunAttachment.cs" />
+    <Compile Include="Links.cs" />
+    <Compile Include="load local image.xaml.cs">
+      <DependentUpon>load local image.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesDialog.xaml.cs">
+      <DependentUpon>ResourcesDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClassTitleControl.xaml.cs">
+      <DependentUpon>ClassTitleControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\AttachmentDialog.xaml.cs">
+      <DependentUpon>AttachmentDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ClassBuild.cs" />
+    <Compile Include="GUIs\GunSelectDialog\GunSelectDialog.xaml.cs">
+      <DependentUpon>GunSelectDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\ItemSelect.xaml.cs">
+      <DependentUpon>ItemSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\AttachmentClass.cs" />
+    <Compile Include="GUIs\PerkDialog\PerkDialog.xaml.cs">
+      <DependentUpon>PerkDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ClassControl.xaml.cs">
+      <DependentUpon>ClassControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\IconClass.cs" />
+    <Compile Include="Classes\Data.cs" />
+    <Compile Include="UserControl\GunControl.xaml.cs">
+      <DependentUpon>GunControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl\SelectControl.xaml.cs">
+      <DependentUpon>SelectControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\TextImageControl.xaml.cs">
+      <DependentUpon>TextImageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUIs\ViewGunDialog.xaml.cs">
+      <DependentUpon>ViewGunDialog.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\1911.png" />
+    <Content Include="Assets\AK-47.png" />
+    <Content Include="Assets\AK-74u.png" />
+    <Content Include="Assets\Assassin.png" />
+    <Content Include="Assets\Assault Pack.png" />
+    <Content Include="Assets\AUG.png" />
+    <Content Include="Assets\Ballistic Knife.png" />
+    <Content Include="Assets\black star.png" />
+    <Content Include="Assets\blank image.png" />
+    <Content Include="Assets\Blank Perk.png" />
+    <Content Include="Assets\Bullfrog.png" />
+    <Content Include="Assets\C4.png" />
+    <Content Include="Assets\Cigma 2.png" />
+    <Content Include="Assets\Cold Blooded.png" />
+    <Content Include="Assets\DangerClose.png" />
+    <Content Include="Assets\Decoy.png" />
+    <Content Include="Assets\Diamatti.png" />
+    <Content Include="Assets\DMR 14.png" />
+    <Content Include="Assets\E-Tool.png" />
+    <Content Include="Assets\Engineer.png" />
+    <Content Include="Assets\Fara 83.png" />
+    <Content Include="Assets\FFAR 1.png" />
+    <Content Include="Assets\Field Mic.png" />
+    <Content Include="Assets\Flack Jacket.png" />
+    <Content Include="Assets\Flashbang.png" />
+    <Content Include="Assets\Forward Intel.png" />
+    <Content Include="Assets\Frag.png" />
+    <Content Include="Assets\Gallo SA12.png" />
+    <Content Include="Assets\Gas Mine.png" />
+    <Content Include="Assets\Gearhead.png" />
+    <Content Include="Assets\Ghost.png" />
+    <Content Include="Assets\Groza.png" />
+    <Content Include="Assets\Gunfighter.png" />
+    <Content Include="Assets\Gung ho.png" />
+    <Content Include="Assets\gunsmith hovered 2.png" />
+    <Content Include="Assets\gunsmith.png" />
+    <Content Include="Assets\Hauer 77.png" />
+    <Content Include="Assets\hover view.png" />
+    <Content Include="Assets\Icons8\export.png" />
+    <Content Include="Assets\Icons8\eye.png" />
+    <Content Include="Assets\Icons8\import.png" />
+    <Content Include="Assets\Icons8\minus.png" />
+    <Content Include="Assets\Icons8\plus.png" />
+    <Content Include="Assets\Icons8\save.png" />
+    <Content Include="Assets\Icons8\settings.png" />
+    <Content Include="Assets\Jammer.png" />
+    <Content Include="Assets\Knife.png" />
+    <Content Include="Assets\Krig 6.png" />
+    <Content Include="Assets\KSP 45.png" />
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\Law Breaker.png" />
+    <Content Include="Assets\LC10.png" />
+    <Content Include="Assets\LW3-Tundra.png" />
+    <Content Include="Assets\M16.png" />
+    <Content Include="Assets\M60.png" />
+    <Content Include="Assets\M79.png" />
+    <Content Include="Assets\M82.png" />
+    <Content Include="Assets\MAC-10.png" />
+    <Content Include="Assets\Machete.png" />
+    <Content Include="Assets\Magnum.png" />
+    <Content Include="Assets\Milano 821.png" />
+    <Content Include="Assets\Molotov.png" />
+    <Content Include="Assets\MP5.png" />
+    <Content Include="Assets\Ninja.png" />
+    <Content Include="Assets\Paranoia.png" />
+    <Content Include="Assets\Pelington 703.png" />
+    <Content Include="Assets\Perk Greed.png" />
+    <Content Include="Assets\PPSh-41.png" />
+    <Content Include="Assets\Proximity Mine.png" />
+    <Content Include="Assets\QBZ-83.png" />
+    <Content Include="Assets\Quartermaster.png" />
+    <Content Include="Assets\R1 Shadowhunter.png" />
+    <Content Include="Assets\RPD.png" />
+    <Content Include="Assets\RPG-7.png" />
+    <Content Include="Assets\Sam Turret.png" />
+    <Content Include="Assets\Scavenger.png" />
+    <Content Include="Assets\selected attachment icon.png" />
+    <Content Include="Assets\Selected dot.png" />
+    <Content Include="Assets\Semtex.png" />
+    <Content Include="Assets\Sledgehammer.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\Smoke Grenade.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Spycraft.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\star.png" />
+    <Content Include="Assets\Stimshot.png" />
+    <Content Include="Assets\Stoner 63.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Streetsweeper.png" />
+    <Content Include="Assets\Stun Grenade.png" />
+    <Content Include="Assets\Swisss K31.png" />
+    <Content Include="Assets\Tactical Mask.png" />
+    <Content Include="Assets\Tomahawk.png" />
+    <Content Include="Assets\Tracker.png" />
+    <Content Include="Assets\Trophy System.png" />
+    <Content Include="Assets\Type 63.png" />
+    <Content Include="Assets\unselected attachment icon.png" />
+    <Content Include="Assets\view.png" />
+    <Content Include="Assets\Wakizashi.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\XM4.png" />
+    <Content Include="Assets\Icons8\youtube.png" />
+    <Content Include="Assets\ZRG 20mm.png" />
+    <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AttachmentDialogV2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\GunSelectDialog\ComboBoxGunSelectDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\BlueprintDialog\CustomBlueprintsDialogV2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\AddBlueprintDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\AddCustomAttachmentDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\BlueprintDialog\CustomBlueprintsDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\NameDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\GunSelectDialog\GunSelectDialogV2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\PerkDialog\PerkDialogV2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\SettingsDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\RemoveAttachmentDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="load local image.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResourcesDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\ClassTitleControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\AttachmentDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\GunSelectDialog\GunSelectDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\ItemSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\PerkDialog\PerkDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\ClassControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\GunControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControl\SelectControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\TextImageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUIs\ViewGunDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.12</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cold War Class Builder V3_TemporaryKey.pfx" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,37 @@
+﻿<ContentDialog
+    x:Class="Cold_War_Class_Builder_V3.ViewGunDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cold_War_Class_Builder_V3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Build Name?"
+    PrimaryButtonText=""
+    SecondaryButtonText="Close"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick" Loaded="ContentDialog_Loaded">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock x:Name="GunName" Text="" FontSize="22" TextAlignment="Center"/>
+            <TextBlock Text="Optic" FontFamily="Arial"/>
+            <TextBlock x:Name="Optic" FontFamily="Arial" TextAlignment="Right" FontSize="16" Margin="0,2,0,2" />
+            <TextBlock Text="Muzzle" FontFamily="Arial"/>
+            <TextBlock x:Name="Muzzle" FontFamily="Arial" TextAlignment="Right" FontSize="16" Margin="0,2,0,2" />
+            <TextBlock Text="Barrel" FontFamily="Arial"/>
+            <TextBlock x:Name="Barrel" FontFamily="Arial" TextAlignment="Right" FontSize="16" Margin="0,2,0,2" />
+            <TextBlock Text="Body" FontFamily="Arial"/>
+            <TextBlock x:Name="Body" FontFamily="Arial" TextAlignment="Right" FontSize="16" Margin="0,2,0,2" />
+            <TextBlock Text="Underbarrel" FontFamily="Arial"/>
+            <TextBlock x:Name="Underbarrel" FontFamily="Arial" TextAlignment="Right" FontSize="16" Margin="0,2,0,2" />
+            <TextBlock Text="Magazine" FontFamily="Arial"/>
+            <TextBlock x:Name="Magazine" FontFamily="Arial" TextAlignment="Right" FontSize="16" Margin="0,2,0,2" />
+            <TextBlock Text="Handle" FontFamily="Arial"/>
+            <TextBlock x:Name="Handle" FontFamily="Arial" TextAlignment="Right" FontSize="16" Margin="0,2,0,2" />
+            <TextBlock Text="Stock" FontFamily="Arial"/>
+            <TextBlock x:Name="Stock" FontFamily="Arial" TextAlignment="Right" FontSize="16" Margin="0,2,0,2" />
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="2" Margin="24,49,0,0" VerticalAlignment="Top" Width="0"/>
+    </Grid>
+</ContentDialog>

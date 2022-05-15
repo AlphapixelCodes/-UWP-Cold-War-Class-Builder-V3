@@ -1,0 +1,23 @@
+﻿<ContentDialog
+    x:Class="Cold_War_Class_Builder_V3.ComboBoxGunSelectDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Cold_War_Class_Builder_V3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Select Gun"
+    PrimaryButtonText="Select"
+    SecondaryButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick" Loaded="ContentDialog_Loaded">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Type"/>
+            <ComboBox x:Name="typeCombo" Width="270" HorizontalAlignment="Center" Height="45" VerticalAlignment="Center" SelectionChanged="typeCombo_SelectionChanged" Margin="0,5,0,5"/>
+            <TextBlock Text="Gun"/>
+            <ComboBox x:Name="GunCombo" Width="270" HorizontalAlignment="Center" Height="45" VerticalAlignment="Center" Margin="0,5,0,0"/>
+        </StackPanel>
+    </Grid>
+</ContentDialog>
